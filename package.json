@@ -1,0 +1,37 @@
+{
+  "name": "pofresh-http",
+  "version": "1.0.0",
+  "description": "Wrap express module as pofresh http tools.",
+  "main": "index.js",
+  "private": false,
+  "homepage": "https://github.com/ljhsai/pofresh-http",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ljhsai/pofresh-http.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ljhsai/pofresh-http/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ljhsai/pofresh-http#license"
+    }
+  ],
+  "keywords": [
+    "pofresh",
+    "express",
+    "http",
+    "pofresh-http",
+    "pofresh http"
+  ],
+  "author": "ljhsai",
+  "license": "MIT",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0"
+  }
+}
