@@ -5,7 +5,7 @@ Wrap express module as pofresh http tools.
 
 
 [wiki][]
-[wiki]: https://github.com/Sailor20/pofresh-http/wiki
+[wiki]: https://github.com/ljhsai/pofresh-http/wiki
 
 ###How to use pofresh-http:
 
@@ -55,11 +55,10 @@ If you want to support https, you should add more keys to config/http.json
 ```
 #####4. Change app.js
 ```js
-const pomeloHttp = require('pofresh-http');
-const path = require('path');
+const pofreshHttp = require('pofresh-http');
 app.configure('development', 'gamehttp', () => {
-  app.loadConfig('httpConfig', path.join(app.getBase(), 'config/http.json'));
-  app.use(pomeloHttp, {
+  app.loadConfigBaseApp('httpConfig', 'config/http.json');
+  app.use(pofreshHttp, {
     http: app.get('httpConfig')[app.getServerId()]
   });
 });
@@ -127,13 +126,12 @@ If you want to support https, you should add more keys to config/http.json
 ```
 #####4. Change app.js
 ```js
-const pomeloHttp = require('pofresh-http');
-const path = require('path');
+const pofreshHttp = require('pofresh-http');
 
 app.configure('development', 'gamehttp', () => {
-  app.loadConfig('httpConfig', path.join(app.getBase(), 'config/http.json'));
-  app.use(pomeloHttp, {
-    httpComponent: app.get('httpConfig')[app.getServerType()]
+  app.loadConfigBaseApp('httpConfig', 'config/http.json');
+  app.use(pofreshHttp, {
+    http: app.get('httpConfig')[app.getServerType()]
   });
 });
 ```
@@ -145,6 +143,8 @@ module.exports = (app, express) => {
   router.get('/test', (req, res) => {
     res.send('test success')
   });
+  
+  return router;
 };
 ```
 #####6. Run your app and open urls: http://127.0.0.1:3001/test, http://127.0.0.1:3002/test
