@@ -63,7 +63,7 @@ app.configure('development', 'gamehttp', () => {
   });
 });
 ```
-#####5. Create app/servers/gamehttp/route/testRoute.js
+#####5. Create app/servers/gamehttp/routers/testRoute.js
 ```js
 module.exports = (app, express) => {
   const router = express.Router();
@@ -135,7 +135,7 @@ app.configure('development', 'gamehttp', () => {
   });
 });
 ```
-#####5. Create app/servers/gamehttp/route/testRoute.js
+#####5. Create app/servers/gamehttp/routers/testRoute.js
 ```js
 module.exports = (app, express) => {
   const router = express.Router();
