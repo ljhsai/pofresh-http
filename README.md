@@ -5,7 +5,7 @@ Wrap express module as pofresh http tools.
 
 
 [wiki][]
-[wiki]: https://github.com/ljhsai/pofresh-http/wiki
+[wiki]: https://github.com/pofresh/pofresh-http/wiki
 
 ###How to use pofresh-http:
 
